@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Members</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+       <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background-color: #f4f5f7;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 27px;
+            margin-bottom: 8px;
+            color: #263b59;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .form-section {
+            background: white;
+            padding: 25px;
+            border: 1px solid #e2e5e9;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 19px;
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            border: 1px solid #d5d9df;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4779bd;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #315f9e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #244b80;
+        }
+
+        .members-section {
+            margin-top: 22px;
+            padding: 20px;
+            background-color: #263f65;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .members-section h2 {
+            margin-bottom: 15px;
+        }
+
+        #member-output {
+            background-color: #324e77;
+            padding: 15px;
+            border-radius: 5px;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        #member-count {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Campus Club Directory</h1>
+        <p class="subtitle">Glee Club Member Management</p>
+
+        <div class="form-section">
+
+            <h2>Add New Club Member</h2>
+
+            <input type="text" id="first-name" placeholder="First Name">
+
+            <input type="text" id="last-name" placeholder="Last Name">
+
+            <button py-click="add_member">Add Member</button>
+
+            <div class="members-section">
+
+                <h2>All Members</h2>
+
+                <div id="member-output">
+                    Loading glee members..
+                </div>
+
+                <p id="member-count">Total Members: 0</p>
+
+            </div>
+
+        </div>
+
+        <p class="footer">Campus Club Directory | ICT 10</p>
+
+    </div>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
